@@ -1,9 +1,11 @@
 import { User } from 'lucide-react';
 
 export function SignIn() {
+  const githubOauthURL = `https://github.com/login/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}`;
+
   return (
     <a 
-    href={`https://github.com/login/oauth/authorize?client_id=${process.env.NEXT_PUBLIC_GITHUB_CLIENT_ID}`}
+      href={githubOauthURL}
       className="flex items-center gap-3 text-left transition-colors hover:text-gray-50"
     >
       <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-400">
